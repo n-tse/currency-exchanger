@@ -4,5 +4,33 @@
   <title>Currency Exchanger</title>
 </head>
 <body>
+  <div class = "container">
+    <h1>Convert USD to another currency</h1>
+    <label for="usdValue">Enter a value in USD:</label>
+    <input id="usdValue" type="text">
+    <label for="convertTo">Select the currency you want to convert to:</label>
+    <input id="convertTo" type="text">
+    <div class="radio">
+      <label>
+        <input type="radio" name="currency" value="ETB" checked>
+        Ethiopian Birr
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="currency" value="HNL">
+        Hong Kong Dollar
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="currency" value="IDR">
+        Indonesian Rupiah
+      </label>
+    </div>
+    <button class="btn-success" id="usdConvert">Get equivalent value</button>
+    <div class="showErrors"></div>
+    <div class="showEquivalent"></div>
+  </div>
 </body>
 </html>
