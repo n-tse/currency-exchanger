@@ -8,8 +8,9 @@
     <h1>Convert USD to another currency</h1>
     <label for="usdValue">Enter a value in USD:</label>
     <input id="usdValue" type="text">
+    <br>
     <label for="convertTo">Select the currency you want to convert to:</label>
-    <input id="convertTo" type="text">
+    <br>
     <div class="radio">
       <label>
         <input type="radio" name="currency" value="ETB" checked>
@@ -26,6 +27,18 @@
       <label>
         <input type="radio" name="currency" value="IDR">
         Indonesian Rupiah
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="currency" value="MYR">
+        Malaysian Ringgit
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="currency" value="KZT">
+        Kazakhstani Tenge
       </label>
     </div>
     <button class="btn-success" id="usdConvert">Get equivalent value</button>
