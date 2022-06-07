@@ -3,7 +3,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import CurrencyExchanger from './js/currencyExchanger.js';
+import CurrencyExchanger from './currencyExchanger.js';
 
 function clearFields() {
   $('#usdValue').val("");
@@ -12,18 +12,14 @@ function clearFields() {
 }
 
 $(document).ready(function() {
-  console.log("1");
   $('#usdConvert').click(function() {
-    let currencyToConvert = $('#currency').val();
+    let currencyToConvert = $('input:radio[name=currency]:checked').val();
     clearFields();
     let promise = CurrencyExchanger.getEquivalent(currencyToConvert);
-    console.log("2");
     promise.then(function(response) {
-      console.log("3");
       const body = JSON.parse(response);
       $('.showEquivalent').text(`The equivalent of ${usdValue} USD in ${currency} is ${body.conversion_result}`);
       $('.showErrors').text(`There was an error processing your request: ${error}`);
     });
-    console.log("4");
   });
 }); 
