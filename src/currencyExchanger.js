@@ -1,9 +1,7 @@
 export default class CurrencyExchanger {  
-  static getEquivalent(currency) {
+  static getEquivalent(usdValue, currency) {
     return new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
-      console.log(${currency});
-      console.log(${usdValue});
       const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/USD/${currency}/${usdValue}`;
       request.onload = function() {
         if (this.status === 200) {
