@@ -22,6 +22,7 @@ This is a currency exchange application that allows the user to type in an amoun
 * Indonesian Rupiah
 * Malysian Ringgit
 * Kazakhstani Tenge
+
 This application makes API calls to Exchange Rate API to determine the most recent exchange rates.
 
 ## Setup/Installation Requirements
