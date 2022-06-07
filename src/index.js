@@ -22,7 +22,7 @@ $(document).ready(function() {
       let promise = CurrencyExchanger.getEquivalent(usdValue, currencyToConvert);
       promise.then(function(response) {
         const body = JSON.parse(response);
-        $('.showEquivalent').text(`The equivalent of ${usdValue} USD in ${currencyToConvert} is ${body.conversion_result}`);
+        $('.showEquivalent').text(`The equivalent of ${usdValue} USD in ${currencyToConvert} is ${body.conversion_result.toFixed(2)}`);
       }, function(error) {  
         $('.showErrors').text(`There was an error processing your request: ${error}`);
       });
