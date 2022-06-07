@@ -20,7 +20,8 @@ $(document).ready(function() {
     promise.then(function(response) {
       const body = JSON.parse(response);
       $('.showEquivalent').text(`The equivalent of ${usdValue} USD in ${currencyToConvert} is ${body.conversion_result}`);
-      // $('.showErrors').text(`There was an error processing your request: ${error}`);
+    }, function(error) {  
+      $('.showErrors').text(`There was an error processing your request: ${error}`);
     });
   });
 }); 
