@@ -39,7 +39,7 @@ This application makes API calls to Exchange Rate API to determine the most rece
 
 ## Known Bugs
 
-* The code/wiring is not linked up correctly, so the application actually does not work at this time. Work in progress.
+* None
 
 ## License
 
